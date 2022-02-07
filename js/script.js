@@ -60,6 +60,8 @@ let store = new Vue({
 
 
         },
+
+        // THE SEARCH FUNCTION
         searchLessons: function () {
 
             fetch("https://mdx2021-cw2-b.herokuapp.com/collection/lessons/" + this.searchTxt).then(
@@ -88,7 +90,10 @@ let store = new Vue({
                 this.cannotCheckOut = true;
             }
         },
+
+
         checkOut: function () {
+            // A fetch that saves a new order with POST after it is submitted.
             fetch('https://mdx2021-cw2-b.herokuapp.com/collection/orders', {
                     method: 'POST', // set the HTTP method as 'POST'
                     headers: {
@@ -107,6 +112,8 @@ let store = new Vue({
 
             for (let index = 0; index < this.cartItems.length; index++) {
                 const lesson = this.fetchLesson(this.cartItems[index].lessonID);
+
+                // A fetch that updates the available lesson space with PUT after an order is submitted.
                 fetch(`https://mdx2021-cw2-b.herokuapp.com/collection/lessons/${lesson._id}`, {
                         method: 'PUT', // set the HTTP method as 'POST'
                         headers: {
@@ -205,6 +212,8 @@ let store = new Vue({
             }
         }
     },
+
+    // A fetch that retrieves all the lessons with GET.
     created: function () {
         fetch("https://mdx2021-cw2-b.herokuapp.com/collection/lessons").then(
             function (response) {
