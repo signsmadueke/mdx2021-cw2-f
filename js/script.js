@@ -62,7 +62,7 @@ let store = new Vue({
         },
         searchLessons: function () {
 
-            fetch("http://localhost:3000/collection/lessons/" + this.searchTxt).then(
+            fetch("https://mdx2021-cw2-b.herokuapp.com/collection/lessons/" + this.searchTxt).then(
                 function (response) {
                     response.json().then(
                         function (data) {
@@ -89,7 +89,7 @@ let store = new Vue({
             }
         },
         checkOut: function () {
-            fetch('http://localhost:3000/collection/orders', {
+            fetch('https://mdx2021-cw2-b.herokuapp.com/collection/orders', {
                     method: 'POST', // set the HTTP method as 'POST'
                     headers: {
                         'Content-Type': 'application/json', // set the data type as JSON
@@ -107,7 +107,7 @@ let store = new Vue({
 
             for (let index = 0; index < this.cartItems.length; index++) {
                 const lesson = this.fetchLesson(this.cartItems[index].lessonID);
-                fetch(`http://localhost:3000/collection/lessons/${lesson._id}`, {
+                fetch(`https://mdx2021-cw2-b.herokuapp.com/collection/lessons/${lesson._id}`, {
                         method: 'PUT', // set the HTTP method as 'POST'
                         headers: {
                             'Content-Type': 'application/json', // set the data type as JSON
@@ -206,7 +206,7 @@ let store = new Vue({
         }
     },
     created: function () {
-        fetch("http://localhost:3000/collection/lessons").then(
+        fetch("https://mdx2021-cw2-b.herokuapp.com/collection/lessons").then(
             function (response) {
                 response.json().then(
                     function (data) {
