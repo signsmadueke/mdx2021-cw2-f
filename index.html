@@ -8,7 +8,12 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<title>Coursework 1</title>
+	<title>Coursework 2</title>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('service-worker.js');
+		};
+	</script>
 </head>
 
 <body>
@@ -44,7 +49,7 @@
 					<div v-for="(lesson, index) in sortedLessons" class="lesson">
 						<div class="details">
 							<div class="image">
-								<img v-bind:src="`http://localhost:3000/${lesson.image}`" alt="">
+								<img v-bind:src="`https://signsmadueke.github.io/mdx2021-cw2-f/${lesson.image}`" alt="">
 							</div>
 							<div class="text">
 								<p>Subject: {{lesson.topic}}</p>
@@ -58,22 +63,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="lessons">
-				<div v-for="lesson in sorted" :key="lesson.id" class="lesson">
-					<div class="details">
-						<div class="image">
-							<img v-bind:src="lesson.image" alt="">
-						</div>
-						<div class="text">
-							<p>Subject: {{lesson.subject}}</p>
-							<p>Location: {{lesson.location}}</p>
-							<p>Price: {{lesson.price}}</p>
-							<p>Spaces: {{lesson.spaces}}</p>
-						</div>
-					</div>
-					<button @click="addToCart">Add to Cart</button>
-				</div>
-			</div> -->
 
 			<div v-else id="check-out">
 				<div class="shopping-cart">
@@ -83,7 +72,7 @@
 							<div v-for="(cartItem, index) in cartItems" class="item">
 								<div class="details">
 									<div class="image">
-										<img v-bind:src="`http://localhost:3000/${fetchLesson(cartItem.lessonID).image}`"
+										<img v-bind:src="`https://signsmadueke.github.io/mdx2021-cw2-f/${fetchLesson(cartItem.lessonID).image}`"
 											alt="">
 									</div>
 									<div class="text">

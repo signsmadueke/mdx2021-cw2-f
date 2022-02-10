@@ -1,0 +1,13 @@
+{
+    "name": "Coursework 2",
+    "short_name": "School",
+    "description": "Coursework 2",
+    "icons": [{
+        "src": "images/icon-store-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "backgroundn_color": "blue"
+}
