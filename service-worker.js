@@ -2,16 +2,16 @@ var cacheName = "coursework-v1";
 var cacheFiles = [
     'index.html',
     'coursework.webmanifest',
-    'images/accounting.jpg',
-    'images/biology.jpg',
-    'images/chemistry.jpg',
-    'images/commerce.jpg',
-    'images/economics.jpg',
-    'images/english.jpg',
-    'images/geography.jpg',
-    'images/maths.jpg',
-    'images/music.jpg',
-    'images/physics.jpg',
+    'images/lessons/accounting.jpg',
+    'images/lessons/biology.jpg',
+    'images/lessons/chemistry.jpg',
+    'images/lessons/commerce.jpg',
+    'images/lessons/economics.jpg',
+    'images/lessons/english.jpg',
+    'images/lessons/geography.jpg',
+    'images/lessons/maths.jpg',
+    'images/lessons/music.jpg',
+    'images/lessons/physics.jpg',
     'images/icon-512.png'
 ];
 
