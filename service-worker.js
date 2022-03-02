@@ -12,7 +12,8 @@ var cacheFiles = [
     'images/lessons/maths.jpg',
     'images/lessons/music.jpg',
     'images/lessons/physics.jpg',
-    'images/icon-512.png'
+    'images/icon-512.png',
+    'images/icon-192.png'
 ];
 
 self.addEventListener('install', (e) => {
